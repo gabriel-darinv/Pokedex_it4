@@ -1,6 +1,7 @@
 using System;
+using System.Collections.Generic;
 
-namespace code2
+namespace exec
 {
     public class Pokemon
     {
@@ -34,8 +35,21 @@ namespace code2
 
         public Tipo Vantagens
         {
-            get; // definir aqui a vantagem para cada tipo de pokemon
-            set;
+            get // definir aqui a vantagem para cada tipo de pokemon
+            {
+                if(this.naturezas[0]==Tipo.Fogo)
+                {
+                    return Tipo.Grama;
+                }
+                else if (this.naturezas[0] == Tipo.Agua)
+                {
+                    return Tipo.Fogo;
+                }
+                else
+                {
+                    return Tipo.Agua;
+                }
+            }
         }
         public Tipo Desvantagens
         {
@@ -73,6 +87,7 @@ namespace code2
         public Tipo Natureza { get; set; }
     }
 
+
     public abstract class Pessoa
     {
         protected Pessoa(string nome)
@@ -82,6 +97,83 @@ namespace code2
         public string Nome { get; set; }
 
         public List<Pokemon> Pokemons {get; set;}
+        public virtual void AddPokemon(Pokemon pokemon)
+        {
+            if (pokemon != null)
+            {
+                this.Pokemons.Add(pokemon);
+            }
+        }
 
+        public abstract int Treinar(Pokemon pokemon);
+        // public abstract int Batalhar(Pokemon pokemon);
+        public abstract int Batalhar(Pokemon pokemon);
+
+
+    }
+
+    public class Treinador : Pessoa
+    {
+        public Treinador(string nome) : base(nome)
+        {}
+        public string Insignias { get; set; }
+        public override void AddPokemon(Pokemon pokemon)
+        {
+            if(base.Pokemons.Count >6)
+            {
+                Console.WriteLine("Máximo 6 Pokemons na Pokedex do Treinador!!!");
+            }
+            else
+            {
+                base.AddPokemon(pokemon);
+            }
+        }
+        
+        public override int Treinar(Pokemon pokemon)
+        {
+            throw new System.NotImplementedException();
+        }
+        public override int Batalhar(Pokemon pokemon)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+    public class EnfermeiraJoy : Pessoa
+    {
+        public EnfermeiraJoy(string nome) : base(nome)
+        {}
+        public string Insignias { get; set; }
+        public override void AddPokemon(Pokemon pokemon)
+        {
+            base.AddPokemon(pokemon);
+
+        }
+        public override int Treinar(Pokemon pokemon)
+        {
+            throw new System.NotImplementedException();
+        }
+        public override int Batalhar(Pokemon pokemon)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+    public class Viloes : Pessoa
+    {
+        public Viloes(string nome) : base(nome)
+        {}
+        public string Insignias { get; set; }
+        public override void AddPokemon(Pokemon pokemon)
+        {
+            base.AddPokemon(pokemon);
+
+        }
+        public override int Treinar(Pokemon pokemon)
+        {
+            throw new System.NotImplementedException();
+        }
+        public override int Batalhar(Pokemon pokemon)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

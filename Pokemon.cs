@@ -87,7 +87,21 @@ namespace exec
         public Tipo Natureza { get; set; }
     }
 
+    private Pokemon evolucao;
+    public Pokemon evolucao
+    {
+        get
+        {
+            return this.evolucao;
+        }
+        set
+        {
+            
+        }
+    }
 
+
+// ================================ SERES HUMANOS === HERANÇA ================================================ INICIO AULA 5
     public abstract class Pessoa
     {
         protected Pessoa(string nome)

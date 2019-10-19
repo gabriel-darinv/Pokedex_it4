@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\it4360\\Pokedex_it4\\Projeto_final\\Projeto_final.csproj": {}
+  },
+  "projects": {
+    "C:\\it4360\\Pokedex_it4\\Projeto_final\\Projeto_final.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\it4360\\Pokedex_it4\\Projeto_final\\Projeto_final.csproj",
+        "projectName": "Projeto_final",
+        "projectPath": "C:\\it4360\\Pokedex_it4\\Projeto_final\\Projeto_final.csproj",
+        "packagesPath": "C:\\Users\\ALPITEL\\.nuget\\packages\\",
+        "outputPath": "C:\\it4360\\Pokedex_it4\\Projeto_final\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ALPITEL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
